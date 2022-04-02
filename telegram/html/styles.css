@@ -1,0 +1,73 @@
+
+@font-face {font-family: "RDR Lino"; src: url("//db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot");   }
+
+
+body {
+    display: none;
+}
+
+.telegram_container {
+    position: absolute;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 45%;
+    height: 340px;
+
+    background-image: url("telegram.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    top: 50%;
+   -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.telegram_content {
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 95px;
+    width: 80%;
+}
+
+.telegram_sender {
+    font-weight: 900;
+}
+
+.telegram_buttons {
+    position: absolute;
+    margin-top: 280px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+p {
+    font-family: 'RDR Lino', serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 26px;
+    color: #242424f2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+
+  font-family: 'RDR Lino', serif;
+  font-size: 20px;
+ 
+  color: white;
+  text-align: center;
+  padding: 40px 16px;
+  text-decoration: underline;
+}
