@@ -171,30 +171,19 @@ end
 
 function GetMessage(firstname, lastname) --INPUT
   
-    AddTextEntry("message", Config.message)
-	DisplayOnscreenKeyboard(0, "message", "", "", "", "", "", 175)
-
-    while (UpdateOnscreenKeyboard() == 0) do
-        Wait(0);
-    end
-
-    while (UpdateOnscreenKeyboard() == 2) do
-        Wait(0);
-        break
-    end
-
-    while (UpdateOnscreenKeyboard() == 1) do
-        Wait(0)
-        if (GetOnscreenKeyboardResult()) then
-            local message = GetOnscreenKeyboardResult()
-
-            print(firstname, lastname, message)
-            
+    -- USE VORP INPUTS FOR MESSAGE
+function GetMessage(firstname, lastname) --INPUT
+    TriggerEvent("vorpinputs:getInput", "Announcement", "Announcement Message", function(input)
+		local message = tostring(input)
+	if message == nil then
+			TriggerEvent("vorp:TipRight", "Canceled", 2000)
+        else 
+            local message = message 
             TriggerServerEvent("Telegram:SendMessage", firstname, lastname, message, GetPlayerServerIds())
-           
-            break
+			
         end
-    end
+    end)
+         
 end
 
 function GetPlayerServerIds()
