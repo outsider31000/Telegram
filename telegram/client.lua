@@ -169,9 +169,7 @@ function GetLastname(firstname) -- INPUT
     end
 end
 
-function GetMessage(firstname, lastname) --INPUT
   
-
 function GetMessage(firstname, lastname) --INPUT
   
     AddTextEntry("message", Config.message)
